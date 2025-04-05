@@ -15,9 +15,14 @@
               "outputPath": "dist/grocery-frontend",
               "index": "src/index.html",
               "main": "src/main.ts",
-              "polyfills": [],
+              "polyfills": [
+                "zone.js"             
+              ],
               "tsConfig": "src/tsconfig.app.json",
-              "assets": ["src/favicon.ico", "src/assets"],
+              "assets": [
+                "src/favicon.ico",
+                "src/assets"
+              ],
               "styles": [
                 "node_modules/bootstrap/dist/css/bootstrap.min.css",
                 "src/styles.css"
@@ -33,10 +38,6 @@
           }
         }
       }
-    },
-    "defaultProject": "grocery-frontend",
-    "cli": {
-      "analytics": "7b7edd1a-431e-4712-b39d-12dfb4db911a"
     }
   }
   
