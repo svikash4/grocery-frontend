@@ -1,0 +1,14 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+      "outDir": "./dist/out-tsc",
+      "strict": true,
+      "baseUrl": "./",
+      "module": "es2022",
+      "moduleResolution": "node",
+      "target": "es2022",
+      "useDefineForClassFields": false,
+      "lib": ["es2022", "dom"]
+    }
+  }
+  
