@@ -34,6 +34,9 @@
         }
       }
     },
-    "defaultProject": "grocery-frontend"
+    "defaultProject": "grocery-frontend",
+    "cli": {
+      "analytics": "7b7edd1a-431e-4712-b39d-12dfb4db911a"
+    }
   }
   
