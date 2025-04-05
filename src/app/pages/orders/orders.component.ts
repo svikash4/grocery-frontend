@@ -1,17 +1,22 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
-@Injectable({
-  providedIn: 'root'
+@Component({
+  selector: 'app-orders',
+  templateUrl: './orders.component.html',
+  styleUrls: ['./orders.component.css']
 })
-export class OrderService {
-  private apiUrl = `${environment.apiBaseUrl}/api/order`;
+export class OrdersComponent implements OnInit {
+  user: any;
 
-  constructor(private http: HttpClient) {}
+  constructor(private router: Router) {}
 
-  placeOrder(orderData: any): Observable<any> {
-    return this.http.post(this.apiUrl, orderData);
+  ngOnInit(): void {
+    const userData = localStorage.getItem('user');
+    if (!userData) {
+      this.router.navigate(['/login']);
+    } else {
+      this.user = JSON.parse(userData);
+    }
   }
 }
