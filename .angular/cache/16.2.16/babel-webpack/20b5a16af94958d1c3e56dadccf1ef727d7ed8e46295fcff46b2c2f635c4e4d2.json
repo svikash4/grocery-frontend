@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  production: false,\n  apiBaseUrl: 'https://grocery-backend-app-fcedg3eya8gaf6he.centralus-01.azurewebsites.net'\n};","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
