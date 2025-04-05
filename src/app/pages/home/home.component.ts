@@ -12,9 +12,13 @@ export class HomeComponent implements OnInit {
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
+    console.log('🔄 Calling productService.getProducts()...');
     this.productService.getProducts().subscribe({
-      next: (res) => this.products = res,
-      error: (err) => console.error('Product fetch failed', err)
+      next: (res) => {
+        console.log('✅ Products received:', res);
+        this.products = res;
+      },
+      error: (err) => console.error('❌ Product fetch failed:', err)
     });
   }
 
@@ -27,6 +31,6 @@ export class HomeComponent implements OnInit {
       cart.push({ productId: product.Id, name: product.Name, quantity: 1, price: product.Price });
     }
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert('Added to cart!');
+    alert('✅ Added to cart!');
   }
 }
