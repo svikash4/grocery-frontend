@@ -1,6 +1,7 @@
 name: 🚀 Deploy Angular Frontend to Azure
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master  # or main if your default branch is main
