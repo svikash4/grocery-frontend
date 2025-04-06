@@ -1,18 +1,18 @@
-<!-- <div class="row">
-    <div class="col-md-4 mb-4" *ngFor="let product of products">
-      <div class="card h-100">
-        <div class="card-body">
-          <h5 class="card-title">{{ product.Name }}</h5>
-          <p class="card-text">
-            <strong>₹{{ product.Price }}</strong><br>
-            <em>{{ product.Category }}</em>
-          </p>
-          <button class="btn btn-success" (click)="addToCart(product)">Add to Cart</button>
-        </div>
+<div class="row" *ngIf="products.length > 0; else loading">
+  <div class="col-md-4 mb-4" *ngFor="let product of products">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.Name }}</h5>
+        <p class="card-text">
+          <strong>₹{{ product.Price }}</strong><br>
+          <em>{{ product.Category }}</em>
+        </p>
+        <button class="btn btn-success" (click)="addToCart(product)">Add to Cart</button>
       </div>
     </div>
   </div>
-   -->
+</div>
 
-<h2>🏠 Welcome to Grocery App</h2>
-<p>This is the home page rendered through routing.</p>
+<ng-template #loading>
+  <p>Loading products...</p>
+</ng-template>

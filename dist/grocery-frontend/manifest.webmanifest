@@ -1,11 +1,11 @@
 {
-  "name": "grocery-frontend",
-  "short_name": "grocery-frontend",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Vikash Grocery Store",
+  "short_name": "Grocery",
+  "theme_color": "#28a745",
+  "background_color": "#ffffff",
   "display": "standalone",
-  "scope": "./",
-  "start_url": "./",
+  "scope": "/",
+  "start_url": "/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
