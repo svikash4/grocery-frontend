@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-8 mx-auto">
+      <h2>Your Cart</h2>
+  
+      <div *ngIf="cart.length === 0" class="alert alert-info">
+        Your cart is empty.
+      </div>
+  
+      <ul class="list-group mb-3" *ngIf="cart.length > 0">
+        <li class="list-group-item" *ngFor="let item of cart; let i = index">
+          <div class="d-flex justify-content-between">
+            <div>
+              <strong>{{ item.name }}</strong> (₹{{ item.price }} x {{ item.quantity }})
+            </div>
+            <button class="btn btn-sm btn-danger" (click)="removeItem(i)">Remove</button>
+          </div>
+        </li>
+      </ul>
+  
+      <h5 *ngIf="cart.length > 0">Total: ₹{{ total }}</h5>
+      <button *ngIf="cart.length > 0" class="btn btn-primary mt-2" (click)="placeOrder()">
+  
